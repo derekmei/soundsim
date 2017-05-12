@@ -1,0 +1,67 @@
+html {
+	font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+body {
+	font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.soundsim-logo {
+	height: 50px;
+}
+
+.navbar-default {
+	background-image: none;
+	background-color: white;
+	border-radius: none;
+}
+
+.home-ptext {
+	line-height: 150%;
+}
+
+.animated-gif {
+	height: 250px;
+}
+
+h3 {
+	margin-top: 10px;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: black;
+}
+
+.footer {
+	margin-top: 20px;
+}
+
+.sidebar {
+	margin-top: 30px;
+}
+
+.sidebar-group {
+	margin-top: 12px;
+}
+
+.sidebar-instr-header {
+	font-size: 20px;
+}
+
+.sidebar-instrument {
+	color: #3E558B;
+	margin-top: 2px;
+}
+
+.instrument-page-img {
+	width: 100%;
+	height: auto;
+}
+
+.instrument-page-link {
+	margin-top: 20px;
+}
+
+.instrument-image {
+	width: 100%;
+}

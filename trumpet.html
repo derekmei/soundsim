@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>SoundSim CS591</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+
+<body>
+
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.html"><img src="images/soundsim-logo.png" class="soundsim-logo"></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">About</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Strings <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="cello.html">Cello</a></li>
+							<li><a href="violin.html">Violin</a></li>
+							<li><a href="guitar.html">Guitar</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Brass <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="french-horn.html">French Horn</a></li>
+							<li><a href="trombone.html">Trombone</a></li>
+							<li><a href="trumpet.html">Trumpet</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Winds <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="clarinet.html">Clarinet</a></li>
+							<li><a href="flute.html">Flute</a></li>
+							<li><a href="oboe.html">Oboe</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8">
+				<h1>Trumpet</h1>
+				<h5 class="home-ptext">For this particular trumpet clip, we have a trumpet playing a C5 forte.</h5>
+				<audio controls>
+				  	<source src="sounds/trumpet.wav" type="audio/wav">
+					Your browser does not support the audio element. Please use Google Chrome or Firefox.
+				</audio>
+				<h5 class="home-ptext">For the attack and sustain phase, we have them taking up a length of .02 second and .7 seconds, respectively. The sustain phase is the longest part of the note. In addition, the attack is also very strong, but should be offset by a sharp decline after the initial attack.  but the decline is a length of .3 seconds, with a half life of .15 seconds.</h5>
+				<div class="row">
+					<div class="col-sm-12">
+						<img src="images/trumpet-signal.png" class="instrument-image">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<img src="images/trumpet-spectrum.png" class="instrument-image">
+					</div>
+				</div>
+				<audio controls>
+				  	<source src="sounds/trumpet-asr.wav" type="audio/wav">
+					Your browser does not support the audio element. Please use Google Chrome or Firefox.
+				</audio>
+				<h5 class="home-ptext">An except from soundonsound.com states that in order to realistically emulate the ADSR dynamics of brass, you need an amplitude envelope with at least five stages; one loud, quick burst of initial sound, sharp decline, then a slightly delayed rise up to full volume. In our particular situation, the original signal did not have a rise in volume after the sharp decline because it's just one note, but we need to still simulate the tone of the trumpet. In order to more accurate simulate the trumpet, we should include the small decline after the initial attack of the sound.</h5>
+				<div class="row">
+					<div class="col-sm-12">
+						<img src="images/trumpet-signal-asr.png" class="instrument-image">
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="sidebar">
+					<h3 class="sidebar-header">All Instrument Groups</h3>
+					<div class="sidebar-group">
+						<a href="strings.html"><div class="sidebar-instr-header">Strings</div></a>
+						<a href="cello.html"><div class="sidebar-instrument">Cello</div></a>
+						<a href="violin.html"><div class="sidebar-instrument">Violin</div></a>
+						<a href="guitar.html"><div class="sidebar-instrument">Guitar</div></a>
+					</div>
+					<div class="sidebar-group">
+						<a href="brass.html"><div class="sidebar-instr-header">Brass</div></a>
+						<a href="french-horn.html"><div class="sidebar-instrument">French Horn</div></a>
+						<a href="trombone.html"><div class="sidebar-instrument">Trombone</div></a>
+						<a href="trumpet.html"><div class="sidebar-instrument">Trumpet</div></a>
+					</div>
+					<div class="sidebar-group">
+						<a href="winds.html"><div class="sidebar-instr-header">Winds</div></a>
+						<a href="clarinet.html"><div class="sidebar-instrument">Clarinet</div></a>
+						<a href="flute.html"><div class="sidebar-instrument">Flute</div></a>
+						<a href="oboe.html"><div class="sidebar-instrument">Oboe</div></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div><!-- /.container -->
+
+
+
+	<footer class="footer">
+		<div class="container">
+			<p class="text-muted">&copy;2017 Sanam Patel &amp; Derek Mei. All sounds taken from Philharmonia Orchestra.</p>
+		</div>
+	</footer>
+</body>
+</html>
